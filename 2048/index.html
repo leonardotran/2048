@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name = 'viewport' content ="width = device-width, initial-scale = 1.0">
+        <link rel ='stylesheet' href="style.css">
+
+        <title>Document</title>
+<style>
+* {
+font-family: sans-serif;
+font-weight: bold;
+}
+
+#controlsUI {
+background-color: #ddd;
+color: #222;
+display: inline-block;
+}
+
+</style>
+
+</head>
+
+<body>
+
+2048 MADE BY LOC</p>
+<p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+<p class="game-explanation">
+    <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+  </p>
+<div id ='game'>
+    <dif class = 'tile'><dif id= 't-1'></div></div>
+    <dif class = 'tile'><dif id= 't-2'></div></div>
+    <dif class = 'tile'><dif id= 't-3'></div></div>   
+    <dif class = 'tile'><dif id= 't-4'></div></div>
+    <dif class = 'tile'><dif id= 't-5'></div></div>
+    <dif class = 'tile'><dif id= 't-6'></div></div>
+    <dif class = 'tile'><dif id= 't-7'></div></div>
+    <dif class = 'tile'><dif id= 't-8'></div></div>
+    <dif class = 'tile'><dif id= 't-9'></div></div>   
+    <dif class = 'tile'><dif id= 't-10'></div></div>
+    <dif class = 'tile'><dif id= 't-11'></div></div>
+    <dif class = 'tile'><dif id= 't-12'></div></div> 
+
+</div>
+<br><br>
+SCORE <div id ='scoreUI'>0</div>
+
+<br><br>
+</body>
+
+You are pressing: <div id ='controlsUI'> Press any Arrow key</div> </p>
+<script>
+
+document.onkeydown = checkKey;
+function checkKey(e){
+e = e || window.event;
+console.log(e.keyCode);
+if(e.keyCode == 38){
+    //up
+    document.getElementById('controlsUI').innerHTML = 'UP';
+}
+else if(e.keyCode == 40){
+        //down
+    document.getElementById('controlsUI').innerHTML = 'DOWN';
+}
+else if(e.keyCode == 37){
+        //left
+    document.getElementById('controlsUI').innerHTML = 'LEFT';        
+}
+else if(e.keyCode == 39){
+        //right
+    document.getElementById('controlsUI').innerHTML = 'RIGHT';
+}
+}   
+</script>
+<script src="game.js"></script>
+</html> 
